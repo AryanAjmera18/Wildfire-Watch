@@ -1,0 +1,51 @@
+# Secrets
+groq.txt
+.env
+api_keys.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+venv/
+env/
+wildfire_env/
+.venv/
+
+# Datasets (Large Files)
+the_wildfire_dataset_2n_version/
+the_wildfire_dataset_severity/
+the_wildfire_dataset_severity_4class/
+wildfire_data/
+data/
+
+# Model Checkpoints & Weights
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.bin
+*.h5
+
+# Model Directories
+vit_wildfire_binary/
+vit_wildfire_binary_robust/
+vit_wildfire_severity/
+vit_wildfire_severity_model/
+resnet_wildfire_severity/
+resnet18_wildfire_severity_colab/
+vit_wildfire_model/
+
+# Generated Artifacts & Results
+gradcam_result.jpg
+cluster_grid.jpg
+faithfulness_results.csv
+image_clusters.csv
+
+# IDE & System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
