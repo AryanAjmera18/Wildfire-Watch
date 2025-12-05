@@ -32,7 +32,7 @@ st.set_page_config(
 st.markdown("""
 <style>
     .main-header {font-size: 3rem; color: #FF4B4B; text-align: center; font-weight: 800;}
-    .sub-header {font-size: 1.5rem; color: #333; text-align: center; margin-bottom: 2rem;}
+    .sub-header {font-size: 1.5rem; text-align: center; margin-bottom: 2rem;}
     .metric-card {background-color: #f0f2f6; padding: 20px; border-radius: 10px; border-left: 5px solid #FF4B4B; color: #000000;}
     .stButton>button {width: 100%; font-weight: bold;}
     .report-box {background-color: #e8f4f8; padding: 20px; border-radius: 10px; border: 1px solid #b3d7ff; color: #000000;}
@@ -100,7 +100,7 @@ if page == "🏠 Project Overview":
 
     with col2:
         if Path("gradcam_result.jpg").exists():
-            st.image("gradcam_result.jpg", caption="Our Explainable AI in Action", use_container_width=True)
+            st.image("gradcam_result.jpg", caption="Our Explainable AI in Action", width="stretch")
         else:
             st.warning("Run explain_wildfire.py to generate the cover image!")
 
@@ -150,7 +150,7 @@ elif page == "🧠 Methodology & Rigor":
         """)
         
         if Path("cluster_grid.jpg").exists():
-            st.image("cluster_grid.jpg", caption="50 Micro-Clusters of Smoke", use_container_width=True)
+            st.image("cluster_grid.jpg", caption="50 Micro-Clusters of Smoke", width="stretch")
 
     with tab3:
         st.header("Robust Training via Augmentation")
@@ -164,7 +164,7 @@ elif page == "🧠 Methodology & Rigor":
         """)
         
         if Path("augmentation_demo.jpg").exists():
-            st.image("augmentation_demo.jpg", caption="Original vs Augmented Images (What the model sees)", use_container_width=True)
+            st.image("augmentation_demo.jpg", caption="Original vs Augmented Images (What the model sees)", width="stretch")
             
         st.info("""
         **Impact:**
@@ -349,8 +349,8 @@ elif page == "🤖 Live Demo & LLM":
                     visualization = show_cam_on_image(img_np, grayscale_cam, use_rgb=True)
                     
                     c1, c2 = st.columns(2)
-                    c1.image(image, caption="Original", use_container_width=True)
-                    c2.image(visualization, caption="Grad-CAM Attention", use_container_width=True)
+                    c1.image(image, caption="Original", width="stretch")
+                    c2.image(visualization, caption="Grad-CAM Attention", width="stretch")
                     
                 except Exception as e:
                     st.error(f"Grad-CAM Error: {e}")
