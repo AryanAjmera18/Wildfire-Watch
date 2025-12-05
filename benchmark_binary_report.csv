@@ -1,0 +1,2 @@
+Model,Accuracy,F1 Score (Macro),Inference Time (ms/img),Parameters (M)
+ViT Binary (Robust),0.9634146341463414,0.9617715617715619,9.236182236089938,85.800194
